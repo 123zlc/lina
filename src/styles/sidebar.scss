@@ -13,7 +13,7 @@
   .sidebar-container {
     transition: width 0.28s;
     width: $sideBarWidth !important;
-    background-color: $menuBg;
+    background-color: var(--bg-theme-color);
     height: 100%;
     position: fixed;
     font-size: 0;
@@ -21,8 +21,8 @@
     bottom: 0;
     left: 0;
     z-index: 1001;
-    overflow: hidden;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    // overflow: hidden;
+    box-shadow: 0 0 8px rgba(100, 110, 144, 0.1);
 
     // reset element-ui css
     .horizontal-collapse-transition {

@@ -5,7 +5,7 @@
     :manual="true"
     :open-delay="500"
     class="item"
-    effect="dark"
+    effect="light"
     placement="bottom-start"
   >
     <el-menu
@@ -122,7 +122,7 @@ export default {
 
 <style lang="scss" scoped>
 .menu-main.el-menu {
-  background-color: var(--menu-bg) !important;
+  background-color: var(--bg-theme-color) !important;
   padding: 6px;
   min-width: 180px;
   box-shadow: none;
@@ -147,17 +147,17 @@ export default {
     height: 38px;
     line-height: 28px;
     padding: 6px 14px;
-    color: var(--menu-text);
+    color: var(--font-theme-color);
     // border-radius: 6px;
 
     &:hover {
-      color: var(--menu-text-active);
-      background: var(--menu-hover-bg, var(--menu-hover));
+      color: var(--bg-theme-color);
+      background: var(--font-hover-theme-color);
     }
 
     &.is-active {
-      color: var(--menu-active-text, var(--menu-text-active));
-      background: var(--menu-active-bg, var(--menu-hover-bg, var(--menu-hover)));
+      color: var(--bg-theme-color);
+      background: var(--font-hover-theme-color);
     }
   }
 }

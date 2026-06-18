@@ -13,6 +13,7 @@
             :open-delay="200"
             placement="right-start"
             popper-class="switcher-popper"
+            effect="light"
             trigger="hover"
           >
             <span slot="reference" style="width: 100%">
@@ -21,7 +22,7 @@
                 :content="isRouteMeta.title"
                 :open-delay="1000"
                 placement="bottom"
-                effect="dark"
+                effect="light"
                 class="view-title"
               >
                 <span class="text-overflow">{{ isRouteMeta.title || '' }}</span>
@@ -58,7 +59,11 @@
         />
       </el-menu>
     </div>
-    <div class="nav-footer">
+    <div class="collapse-toggle-external" @click="toggleSideBar">
+      <img v-show="isCollapse" class="collapse-icon" src="@/assets/img/expand.png" alt="展开">
+      <img v-show="!isCollapse" class="collapse-icon" src="@/assets/img/collapse.png" alt="收起">
+    </div>
+    <!-- <div class="nav-footer">
       <div class="toggle-bar">
         <Hamburger
           :is-active="sidebar.opened"
@@ -66,7 +71,7 @@
           @toggleClick="toggleSideBar"
         />
       </div>
-    </div>
+    </div> -->
     <div :class="{ 'is-show': viewShown }" class="mobile-menu" @click="viewShown = false">
       <ViewSwitcher :mode="'vertical'" />
     </div>
@@ -76,7 +81,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import SidebarItem from './SidebarItem'
-import Hamburger from '@/components/Widgets/Hamburger'
+// import Hamburger from '@/components/Widgets/Hamburger'
 import ViewSwitcher from '../NavHeader/ViewSwitcher'
 import Organization from '../NavHeader/Organization'
 import variables from '@/styles/variables.scss'
@@ -84,7 +89,7 @@ import variables from '@/styles/variables.scss'
 export default {
   components: {
     SidebarItem,
-    Hamburger,
+    // Hamburger,
     ViewSwitcher,
     Organization
   },
@@ -178,6 +183,7 @@ $hover-text-color: var(--menu-text-active);
 $hover-border-color: transparent;
 
 .left-side-wrapper {
+  position: relative;
   .nav-header {
     display: flex;
     flex-wrap: wrap;
@@ -232,10 +238,10 @@ $hover-border-color: transparent;
       white-space: nowrap;
       cursor: pointer;
       transition: all 0.3s;
-      color: var(--menu-text);
-      background-color: var(--menu-bg);
-      border-bottom: 1px solid var(--menu-border, #e9ecef);
-      border-top: 1px solid var(--menu-border, #e9ecef);
+      color: var(--font-theme-color);
+      background-color: var(--bg-theme-color);
+      border-bottom: 1px solid var(--divider-theme-color);
+      // border-top: 1px solid var(--menu-border, #e9ecef);
 
       .switch-view {
         width: 100%;
@@ -265,9 +271,9 @@ $hover-border-color: transparent;
             }
 
             &:hover {
-              color: $hover-text-color;
-              border-color: $hover-border-color;
-              background-color: $hover-bg-color;
+              color: var(--font-hover-theme-color);
+              border-color: var(--font-hover-theme-color);
+              background-color: var(--bg-theme-color);
               border-radius: 4px;
             }
           }
@@ -276,43 +282,63 @@ $hover-border-color: transparent;
     }
   }
 
-  .nav-footer {
-    display: flex;
-    justify-content: flex-start;
-    border-top: 1px solid var(--menu-border,rgba(31, 35, 41, 0.15));
-    background-color: $subMenuBg;
-    color: var(--menu-text);
+  // .nav-footer {
+  //   display: flex;
+  //   justify-content: flex-start;
+  //   border-top: 1px solid var(--menu-border,rgba(31, 35, 41, 0.15));
+  //   background-color: $subMenuBg;
+  //   color: var(--menu-text);
 
-    .toggle-bar {
+  //   .toggle-bar {
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //     width: 54px;
+  //     height: 40px;
+  //     border: 0;
+  //     cursor: pointer;
+
+  //     ::v-deep .hamburger-container {
+  //       display: flex;
+  //       justify-content: center;
+  //       align-items: center;
+  //       width: 100%;
+  //       height: 100%;
+  //       padding: 0 !important;
+
+  //       .svg-icon {
+  //         margin-right: 0 !important;
+  //       }
+  //     }
+
+  //     &:hover {
+  //       color: $hover-text-color;
+  //       border-color: $hover-border-color;
+  //       background-color: $hover-bg-color;
+  //     }
+  //   }
+  // }
+  .collapse-toggle-external {
+      position: absolute;
+      right: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 80px;
+      background: var(--bg-theme-color);
+      // border: 1px solid #DEE0E1;
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+      z-index: 100;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 54px;
-      height: 40px;
-      border: 0;
-      cursor: pointer;
 
-      ::v-deep .hamburger-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        padding: 0 !important;
-
-        .svg-icon {
-          margin-right: 0 !important;
-        }
+      .collapse-icon {
+          width: 4.5px;
+          height: 9px;
       }
-
-      &:hover {
-        color: $hover-text-color;
-        border-color: $hover-border-color;
-        background-color: $hover-bg-color;
-      }
-    }
   }
-
   .is-show {
     display: block !important;
   }

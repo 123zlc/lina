@@ -202,22 +202,22 @@ export default {
 
 <style lang="scss" scoped>
 .external-action-menu-item {
-  color: var(--menu-text) !important;
-  background: var(--menu-bg) !important;
+  color: var(--font-theme-color) !important;
+  background: var(--bg-theme-color) !important;
 
   &:hover {
-    color: var(--menu-text-active) !important;
-    background: var(--menu-hover-bg, var(--menu-hover)) !important;
+    color: var(--bg-theme-color) !important;
+    background: var(--font-hover-theme-color) !important;
   }
 
   &:focus {
-    color: var(--menu-text) !important;
-    background: var(--menu-bg) !important;
+    color: var(--bg-theme-color) !important;
+    background: var(--font-hover-theme-color) !important;
   }
 
   &:focus-visible {
-    color: var(--menu-text-active) !important;
-    background: var(--menu-hover-bg, var(--menu-hover)) !important;
+    color:var(--bg-theme-color) !important;
+    background: var(--font-hover-theme-color) !important;
   }
 
   ::v-deep .svg-icon {

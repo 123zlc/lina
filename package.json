@@ -6,7 +6,7 @@
   "license": "GPL-3.0-or-later",
   "scripts": {
     "dev": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
-    "serve": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
+    "serve": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
     "build": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
     "build:prod": "vue-cli-service build",
     "build:stage": "vue-cli-service build --mode staging",
@@ -94,6 +94,7 @@
     "chalk": "2.4.2",
     "compression-webpack-plugin": "^6.1.1",
     "connect": "3.6.6",
+    "cross-env": "^10.1.0",
     "deasync": "^0.1.29",
     "eslint": "^5.15.3",
     "eslint-config-prettier": "^6.15.0",
