@@ -104,7 +104,7 @@ export default {
       isDev: process.env.NODE_ENV === 'development',
       themeConfigs: [],
       fields: [
-        [this.$t('Basic'), ['login_title', 'theme']],
+        [this.$t('Basic'), ['login_title']],
         ['Logo', ['logo_index', 'logo_logout']],
         [this.$t('Images'), ['login_image']],
         [this.$t('Footer'), ['footer_content']]
