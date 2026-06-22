@@ -122,9 +122,9 @@ export default {
       flex: 1;
       min-width: 0;
       color: #fff;
-      font-weight: 600;
+      font-weight: 500;
       line-height: $headerHeight;
-      font-size: 16px;
+      font-size: 14px;
       text-align: left;
       vertical-align: middle;
       letter-spacing: 1.5px;
