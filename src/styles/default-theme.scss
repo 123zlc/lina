@@ -1,5 +1,6 @@
 :export {
-  --color-primary: #1ab394;
+  // 项目主题色唯一配置源；修改主色后执行 yarn retheme
+  --color-primary: #3D73F5;
   --color-success: #2793d7;
   --color-info: #1c84c6;
   --color-warning: #f8ac59;
@@ -13,11 +14,11 @@
   --color-disabled-background: #f5f7fa;
   --color-disabled: #bbb;
   --color-help-text: #8f959e;
-  --banner-bg: #148f76;
+  --banner-bg: #272B39;
   --submenu-bg: #ffffff;
   --menu-bg: #ffffff;
   --menu-text: #292827;
-  --menu-text-active: #1ab394;
+  --menu-text-active: #fff;
   --menu-is-open-bg: #ffffff;
   --menu-hover: #ffffff;
   --app-main-bg: #f3f3f4;

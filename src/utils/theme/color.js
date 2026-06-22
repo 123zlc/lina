@@ -2,15 +2,19 @@ import color from 'css-color-function'
 import formula from './formula.json'
 import defaultThemeConfig from '@/styles/default-theme.scss'
 
+export function getProjectTheme() {
+  return { ...defaultThemeConfig }
+}
+
 export function generateColors(themeColors) {
   const colors = {}
-  if (!themeColors || Object.keys(themeColors).length === 0) {
-    themeColors = defaultThemeConfig
-  }
-  let primaryColor = themeColors
-  const subColor = themeColors || defaultThemeConfig
-  if (typeof themeColors === 'object') {
-    primaryColor = themeColors['--color-primary']
+  const resolvedTheme = themeColors && Object.keys(themeColors).length > 0
+    ? themeColors
+    : getProjectTheme()
+  let primaryColor = resolvedTheme
+  const subColor = resolvedTheme
+  if (typeof resolvedTheme === 'object') {
+    primaryColor = resolvedTheme['--color-primary']
   }
 
   for (const [key, value] of Object.entries(formula)) {
@@ -109,7 +113,7 @@ export function colorToRgba(color, alpha) {
 }
 
 export function setRootColors() {
-  const themeColors = defaultThemeConfig || {}
+  const themeColors = getProjectTheme()
   for (const [key, value] of Object.entries(themeColors)) {
     document.documentElement.style.setProperty(key, value)
   }
@@ -121,15 +125,13 @@ function applyDefaults(colors, menuActiveTextColor, white) {
   }
 }
 
-export function changeMenuColor(themeColors) {
+export function changeMenuColor() {
   const elementStyle = document.documentElement.style
-  const colors = Object.keys(themeColors).length > 0 ? themeColors : defaultThemeConfig
+  const colors = getProjectTheme()
 
   const white = 'ffffff'
   const black = '000000'
-  const primaryColor = colors['--color-primary'] || defaultThemeConfig['--color-primary']
-
-  // 后端不用返回 --menu-hover
+  const primaryColor = colors['--color-primary']
   const menuActiveTextColor = colors['--menu-text-active'] || primaryColor
 
   applyDefaults(colors, menuActiveTextColor, white)
@@ -155,7 +157,6 @@ export function changeMenuColor(themeColors) {
 
   const lights = [15, 40, 60, 90]
   const darken = [15, 30, 40, 80]
-
   const colorsGenMore = ['--color-primary']
 
   for (const key in colors) {

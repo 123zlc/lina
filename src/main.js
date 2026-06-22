@@ -7,6 +7,7 @@ import { vueCookie as VueCookie } from '@/utils/storage'
 import store from './store'
 import router from './router'
 import i18n, { fetchTranslationsFromAPI } from './i18n/i18n'
+import { applyProjectTheme } from '@/utils/theme/index'
 import { eventBus } from './utils/vue/eventbus'
 import '@/styles/fonts/loadSans'
 import { watchSessions } from './utils/jms/auth'
@@ -72,6 +73,7 @@ Vue.prototype.$xss = xss
 Vue.prototype.$eventBus = eventBus
 
 async function initApp() {
+  applyProjectTheme()
   await fetchTranslationsFromAPI()
   watchSessions()
 

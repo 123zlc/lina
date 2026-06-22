@@ -1,13 +1,14 @@
-import { changeMenuColor, generateColors, mix, setRootColors } from './color'
+import { changeMenuColor, generateColors, getProjectTheme, mix, setRootColors } from './color'
 import axios from 'axios'
 import formula from './formula.json'
+import { scopedLocalStorage as localStorage } from '@/utils/storage'
 
 let originalStyle = ''
 
-export function changeElementColor(themeColors) {
+export function changeElementColor() {
   let colorsCssText = ''
   let cssText = originalStyle
-  const colors = generateColors(themeColors)
+  const colors = generateColors(getProjectTheme())
   for (const [key, value] of Object.entries(colors)) {
     cssText = cssText.replace(new RegExp('(:|\\s+)' + key, 'g'), '$1' + `${value}`)
     colorsCssText += `
@@ -19,15 +20,17 @@ export function changeElementColor(themeColors) {
       const blendColor = mix('ffffff', value.replace(/#/g, ''), 35)
       const darken = mix('000000', value.replace(/#/g, ''), 10)
       const tooLightColor = mix('ffffff', value.replace(/#/g, ''), 90)
+      const buttonHoverBg = key === 'primary' ? value : darken
+      const buttonHoverBorder = key === 'primary' ? value : 'var(--color-border)'
       colorsCssText = colorsCssText + `
         .el-button--${key}{
-           border-color: var(--color-border);
+          border-color: var(--color-border);
         }
         .el-button--${key}:focus,
         .el-button--${key}:active,
         .el-button--${key}:hover {
-          background-color: ${darken}!important;
-          border-color: var(--color-border)!important;
+          background-color: ${buttonHoverBg};
+          border-color: ${buttonHoverBorder};
         }
         .el-button--${key}.is-disabled,
         .el-button--${key}.is-disabled:active,
@@ -65,7 +68,7 @@ export function changeElementColor(themeColors) {
   styleTag.innerText = cssText + colorsCssText
 }
 
-export function changeThemeColors(themeColors) {
+export function changeThemeColors() {
   return new Promise((resolve) => {
     if (!originalStyle) {
       axios.all([
@@ -84,9 +87,18 @@ export function changeThemeColors(themeColors) {
     }
   }).then(() => {
     setRootColors()
-    changeMenuColor(themeColors)
-    changeElementColor(themeColors)
+    changeMenuColor()
+    changeElementColor()
   })
+}
+
+export function applyProjectTheme() {
+  try {
+    localStorage.removeItem('themeColors')
+  } catch (error) {
+    // ignore storage errors
+  }
+  return changeThemeColors()
 }
 
 export function replaceStyleColors(data) {

@@ -1,9 +1,8 @@
 import defaultSettings from '@/settings'
 import { getPublicSettings } from '@/api/settings'
-import { changeElementColor, changeThemeColors } from '@/utils/theme/index'
-import { changeMenuColor } from '@/utils/theme/color'
+import { applyProjectTheme } from '@/utils/theme/index'
+import { getProjectTheme } from '@/utils/theme/color'
 import request from '@/utils/request'
-import { scopedLocalStorage as localStorage } from '@/utils/storage'
 
 const { showSettings, fixedHeader, sidebarLogo, tagsView } = defaultSettings
 
@@ -21,39 +20,18 @@ const state = {
   tableActionButtonType: 'default'
 }
 
-function updateThemeColors(state, interfaceSettings) {
-  const responseThemeColors = interfaceSettings?.theme_info?.colors
-  const themeName = interfaceSettings?.theme
-  const hasResponseThemeColors = responseThemeColors && Object.keys(responseThemeColors).length > 0
+function syncInterfaceTheme(interfaceSettings = {}) {
+  const themeColors = getProjectTheme()
 
-  const cachedThemeColors = (() => {
-    if (themeName === 'default' || !themeName || themeName === 'classic_green') {
-      return {}
-    }
+  applyProjectTheme()
 
-    if (state.themeColors && Object.keys(state.themeColors).length > 0) {
-      return state.themeColors
-    }
-    try {
-      return JSON.parse(localStorage.getItem('themeColors')) || {}
-    } catch (error) {
-      return {}
-    }
-  })()
-
-  const themeColors =
-      hasResponseThemeColors ? responseThemeColors : cachedThemeColors
-
-  const settings = {
-    ...(interfaceSettings || {}),
+  return {
+    ...interfaceSettings,
     theme_info: {
-      ...(interfaceSettings?.theme_info || {}),
+      ...(interfaceSettings.theme_info || {}),
       colors: themeColors
     }
   }
-
-  changeThemeColors(themeColors || {})
-  return settings
 }
 
 function updateTitleIcon(interfaceSettings) {
@@ -68,7 +46,6 @@ function updateTitleIcon(interfaceSettings) {
   if (faviconURL) {
     link.href = faviconURL
   }
-  // 动态修改Title
   document.title = interfaceSettings?.login_title || ''
 }
 
@@ -80,7 +57,7 @@ const mutations = {
   },
   SET_PUBLIC_SETTINGS: (state, settings) => {
     state.publicSettings = settings
-    state.themeColors = settings?.INTERFACE?.theme_info?.colors || {}
+    state.themeColors = getProjectTheme()
     state.tableActionButtonType = settings?.INTERFACE?.theme_info?.['table-action-button'] || 'default'
 
     if (settings['XPACK_ENABLED']) {
@@ -93,10 +70,6 @@ const mutations = {
   SET_SECURITY_WATERMARK_ENABLED: (state, value) => {
     state.publicSettings['SECURITY_WATERMARK_ENABLED'] = value
   },
-  setTheme(state, data) {
-    state.themeColors = data
-    localStorage.setItem('themeColors', JSON.stringify(data))
-  },
   SET_VENDOR: (state, value) => {
     state.vendor = value
   }
@@ -106,14 +79,16 @@ const actions = {
   changeSetting({ commit }, data) {
     commit('CHANGE_SETTING', data)
   },
-  // get user Profile
+  applyProjectTheme() {
+    applyProjectTheme()
+  },
   getPublicSettings({ commit, state }, isOpen) {
     return new Promise((resolve, reject) => {
       getPublicSettings(isOpen)
         .then(response => {
           const data = response || {}
           updateTitleIcon(data?.INTERFACE)
-          const interfaceSettings = updateThemeColors(state, data?.INTERFACE)
+          const interfaceSettings = syncInterfaceTheme(data?.INTERFACE)
           const logoMode = interfaceSettings?.logo_mode || 'combine'
           const vendor = interfaceSettings?.vendor || ''
           const nextSettings = {
@@ -134,11 +109,6 @@ const actions = {
           reject(error)
         })
     })
-  },
-  changeThemeStyle({ commit }, themeColors) {
-    changeMenuColor(themeColors)
-    changeElementColor(themeColors)
-    commit('setTheme', themeColors)
   },
   updateAuthItemStatus({ commit }, payload) {
     const [key, value] = payload

@@ -70,7 +70,7 @@
 import { Page } from '@/layout/components'
 import { IBox, UploadField } from '@/components'
 import GenericCreateUpdateForm from '@/layout/components/GenericCreateUpdateForm'
-import { getInterfaceInfo, previewThemes, restoreInterface } from '@/api/interface'
+import { getInterfaceInfo, restoreInterface } from '@/api/interface'
 import MarkDown from '@/components/Widgets/MarkDown'
 
 export default {
@@ -102,7 +102,6 @@ export default {
       hasSaveContinue: false,
       successUrl: { name: 'Settings' },
       isDev: process.env.NODE_ENV === 'development',
-      themeConfigs: [],
       fields: [
         [this.$t('Basic'), ['login_title']],
         ['Logo', ['logo_index', 'logo_logout']],
@@ -125,12 +124,7 @@ export default {
           ]
         },
         theme: {
-          on: {
-            change: ([value]) => {
-              const themeColors = this.getSelectThemeConfig(value)
-              this.$store.dispatch('settings/changeThemeStyle', themeColors)
-            }
-          }
+          hidden: () => true
         },
         login_image: {
           component: UploadField,
@@ -243,14 +237,8 @@ export default {
     } finally {
       this.loading = false
     }
-    this.getPreviewThemes()
   },
   methods: {
-    getPreviewThemes() {
-      return previewThemes().then(res => {
-        this.themeConfigs = res
-      })
-    },
     async loadUrlMeta() {
       const data = await this.$store.dispatch('common/getUrlMeta', { url: this.url })
       const actions = data.actions || {}
@@ -318,16 +306,6 @@ export default {
     },
     isUploadFieldMeta(meta = {}) {
       return ['file upload'].includes(meta.type)
-    },
-    getSelectThemeConfig(value) {
-      let themeConfig
-      for (const item of this.themeConfigs) {
-        if (item.name === value) {
-          themeConfig = item.colors
-          break
-        }
-      }
-      return themeConfig
     },
     async submitForm(values) {
       const { hasFiles, form, payload } = this.buildSubmitPayload(values)

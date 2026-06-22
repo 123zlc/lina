@@ -333,12 +333,12 @@ $color-drop-menu-border: #e4e7ed;
 
     &:focus {
       color: $btn-text-color;
-      background-color: $color-btn-focus-background !important;
+      background-color: var(--color-primary) !important;
     }
 
     &:hover {
       color: $btn-text-color;
-      background-color: $color-btn-focus-background;
+      background-color: var(--color-primary);
     }
   }
 
