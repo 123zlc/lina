@@ -203,6 +203,7 @@ export default {
   justify-content: center;
   align-content: stretch;
   box-shadow: 0 1px 1px 0 rgba(54, 58, 80, .32);
+  border-radius: 3px;
 
   &.shrink {
     background: inherit;

@@ -159,6 +159,7 @@ export default {
 .label-search {
   border: 1px solid var(--color-border);
   overflow: hidden;
+  border-radius: 3px;
 
   ::v-deep .el-button.label-button {
     height: 28px;

@@ -428,18 +428,18 @@ input[type='file'] {
   color: #909399 !important;
 }
 
-.el-button.el-button--small,
-.el-button--small.is-round {
-  font-weight: 400;
-  padding: 8px 12px;
-  border-radius: 2px;
+.el-button:not(.is-round):not(.is-circle) {
+  border-radius: 3px;
 }
 
-.el-button.el-button--mini,
-.el-button--mini.is-round {
+.el-button.el-button--small {
+  font-weight: 400;
+  padding: 8px 12px;
+}
+
+.el-button.el-button--mini {
   font-size: 0.7rem;
   font-weight: 400;
-  border-radius: 2px;
 }
 
 .el-button--text {

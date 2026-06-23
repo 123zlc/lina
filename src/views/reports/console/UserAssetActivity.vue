@@ -98,6 +98,7 @@ export default {
   margin-top: 16px;
   padding: 20px;
   background: #fff;
+  border-radius: 3px;
 
   .head {
     display: flex;
