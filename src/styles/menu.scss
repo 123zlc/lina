@@ -16,7 +16,7 @@ $single-menu-height: 38px;
     top: 0;
     bottom: 0;
     width: var(--menu-active-indicator-width, 3px);
-    border-radius: 0 2px 2px 0;
+    border-radius: 0 3px 3px 0;
     background-color: var(--menu-active-indicator, var(--color-primary));
     display: var(--menu-active-indicator-display, block);
   }

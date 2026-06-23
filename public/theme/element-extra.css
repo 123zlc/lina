@@ -50,7 +50,7 @@
     background-color: #fff;
     color: var(--color-icon-primary);
     min-width: 28px;
-    border-radius: 2px;
+    border-radius: 3px;
     border: 1px solid #DCDFE6;
     font-size: 12px;
     font-weight: 400;
@@ -130,8 +130,8 @@ td .el-button.el-button--mini {
 
 .el-button.el-button--default:hover:not(.is-disabled) {
   color: #606266;
-  border-color: #d2d2d2;
-  background-color: #e6e6e6;
+  border-color: var(--color-primary);
+  /* background-color: #e6e6e6; */
 }
 
 .el-button-group>.el-dropdown>.el-button {
@@ -186,7 +186,7 @@ td .el-button.el-button--mini {
   background-color: #FFFFFF;
   background-image: none;
   border: 1px solid #e5e6e7;
-  border-radius: 1px;
+  border-radius: 3px;
   color: inherit;
   display: block;
   padding: 6px 12px;

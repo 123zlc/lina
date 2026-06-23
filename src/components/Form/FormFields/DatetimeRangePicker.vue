@@ -114,7 +114,7 @@ html:lang(pt-br) {
 
   margin-left: 10px;
   border: 1px solid #dcdee2;
-  border-radius: 2px;
+  border-radius: 3px;
   height: 28px;
 
   ::v-deep .el-range-separator,

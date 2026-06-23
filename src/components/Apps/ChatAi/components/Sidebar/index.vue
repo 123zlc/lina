@@ -79,7 +79,7 @@ export default {
 
     i,
     .svg {
-      border-radius: 2px;
+      border-radius: 3px;
 
       &:hover {
         background: #cbcbcb;

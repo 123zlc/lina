@@ -270,7 +270,7 @@ export default {
         .message-content {
           flex: 1;
           padding: 6px 10px;
-          border-radius: 2px 12px 12px;
+          border-radius: 3px 12px 12px;
           background-color: #f0f1f5;
         }
 
@@ -331,7 +331,7 @@ export default {
         .message-content {
           background-color: var(--color-primary-light-8, #d9ecff);
           color: #1f2d3d;
-          border-radius: 12px 2px 12px 12px;
+          border-radius: 12px 3px 12px 12px;
         }
       }
     }

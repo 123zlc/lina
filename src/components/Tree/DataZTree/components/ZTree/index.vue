@@ -461,7 +461,7 @@ div.rMenu li {
   border: medium none;
   min-width: 160px;
   background-color: #fff;
-  border-radius: 2px;
+  border-radius: 3px;
   box-shadow: 0 0 3px rgba(86, 96, 117, 0.7);
   display: block;
   float: left;
@@ -487,7 +487,7 @@ div.rMenu li {
 }
 
 .dropdown-menu > li > a {
-  border-radius: 2px;
+  border-radius: 3px;
   color: inherit;
   line-height: 25px;
   margin: 4px;
@@ -596,7 +596,7 @@ div.rMenu li {
     height: 30px;
     line-height: 30px;
     border-bottom: 1px solid #e0e0e0;
-    border-radius: 2px;
+    border-radius: 3px;
     padding: 0 5px;
     box-sizing: border-box;
     overflow: hidden;

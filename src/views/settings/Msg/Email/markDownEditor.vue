@@ -55,7 +55,7 @@ export default {
   min-height: 388px;
   padding: 12px;
   border: 1px solid #ddd;
-  border-radius: 2px;
+  border-radius: 3px;
   overflow: auto;
   background: #fff;
   @import "~github-markdown-css/github-markdown-light.css";

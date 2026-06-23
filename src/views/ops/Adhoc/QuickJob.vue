@@ -597,7 +597,7 @@ $container-bg-color: #f7f7f7;
   background-color: var(--color-primary);
   border-color: var(--color-primary);
   color: #ffffff;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .mini {

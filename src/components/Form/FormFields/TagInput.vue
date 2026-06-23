@@ -164,7 +164,7 @@ export default {
   align-items: center;
   //padding: 0 6px;
   border: 1px solid #dcdee2;
-  border-radius: 1px;
+  border-radius: 3px;
   background-color: #fff;
   line-height: 30px;
 

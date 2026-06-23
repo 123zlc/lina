@@ -163,7 +163,6 @@ export default {
 
   ::v-deep .el-button.label-button {
     height: 28px;
-    border: none;
     padding: 8px;
   }
 

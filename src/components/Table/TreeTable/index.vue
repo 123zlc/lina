@@ -194,6 +194,7 @@ $origin-color: #ffffff;
     //height: 100%;
     background: $origin-color;
     color: var(--color-border);
+    border-radius: 3px;
 
     // title 部分
     .title {
@@ -268,7 +269,7 @@ $origin-color: #ffffff;
   padding: 5px 0;
   border: 1px solid #DCDFE6;
   background-color: #f3f3f3;
-  border-radius: 2px;
+  border-radius: 3px;
   cursor: pointer;
   height: 30px;
 
@@ -296,7 +297,7 @@ $origin-color: #ffffff;
 .transition-box.left {
   background: white;
   border: 1px solid #e0e0e0;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 </style>

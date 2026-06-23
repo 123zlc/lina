@@ -320,7 +320,7 @@ export default {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
   color: #FFFFFF;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .workspace-tab {

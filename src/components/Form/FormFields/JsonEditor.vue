@@ -52,7 +52,7 @@ export default {
         this.$emit('change', this.resultInfo)
       }, 500)
     },
-    onError: _.debounce(function (value) {
+    onError: _.debounce(function(value) {
       this.$message.error(this.$tc('FormatError'))
     }, 1500)
   }
@@ -74,7 +74,7 @@ export default {
     border: 1px solid #e5e6e7;
     border-left: unset;
     border-top: unset;
-    border-radius: 2px;
+    border-radius: 3px;
   }
 
   & ::v-deep .jsoneditor-compact {
