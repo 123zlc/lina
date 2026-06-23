@@ -23,18 +23,18 @@ export function changeElementColor() {
       const buttonHoverBg = key === 'primary' ? value : darken
       const buttonHoverBorder = key === 'primary' ? value : 'var(--color-border)'
       colorsCssText = colorsCssText + `
-        .el-button--${key}{
+        .el-button--${key}:not(.is-plain){
           border-color: var(--color-border);
         }
-        .el-button--${key}:focus,
-        .el-button--${key}:active,
-        .el-button--${key}:hover {
+        .el-button--${key}:not(.is-plain):focus,
+        .el-button--${key}:not(.is-plain):active,
+        .el-button--${key}:not(.is-plain):hover {
           background-color: ${buttonHoverBg};
           border-color: ${buttonHoverBorder};
         }
-        .el-button--${key}.is-disabled,
-        .el-button--${key}.is-disabled:active,
-        .el-button--${key}.is-disabled:focus {
+        .el-button--${key}.is-disabled:not(.is-plain),
+        .el-button--${key}.is-disabled:not(.is-plain):active,
+        .el-button--${key}.is-disabled:not(.is-plain):focus {
           background-color: ${blendColor}!important;
           border-color: var(--color-border);
         }

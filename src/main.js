@@ -23,6 +23,7 @@ import request from '@/utils/request'
 import { message } from '@/utils/vue/message'
 import xss from '@/utils/secure'
 import ElTableTooltipPatch from '@/utils/vue/elTableTooltipPatch.js'
+import ElButtonPrimaryPlainPatch from '@/utils/vue/elButtonPrimaryPlainPatch.js'
 import moment from 'moment'
 
 moment.locale('zh-cn')
@@ -48,6 +49,7 @@ Vue.use(ElementUI, { locale })
 // Vue.use(ElementUI)
 
 Vue.use(ElTableTooltipPatch)
+Vue.use(ElButtonPrimaryPlainPatch)
 
 Vue.config.productionTip = false
 
