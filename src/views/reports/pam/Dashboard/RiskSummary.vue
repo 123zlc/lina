@@ -306,6 +306,7 @@ export default {
   padding: 1.25rem;
   background-color: #fff;
   overflow: hidden;
+  box-shadow: 0 0 8px rgba(100, 110, 144, 0.1)!important;
 
   .metrics-section {
     display: flex;

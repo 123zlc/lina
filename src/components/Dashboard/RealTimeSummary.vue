@@ -86,6 +86,7 @@ export default {
   padding: 20px;
   background: #FFFFFF;
   border-radius: 3px;
+  box-shadow: 0 0 8px rgba(100, 110, 144, 0.1)!important;
 
   .content {
     .el-col {

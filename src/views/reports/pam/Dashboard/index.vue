@@ -77,6 +77,7 @@ export default {
   .risk-summary,
   .mission-summery {
     border-radius: 0.25rem;
+    box-shadow: 0 0 8px rgba(100, 110, 144, 0.1)!important;
   }
 
   .account-secret-summary,
@@ -84,8 +85,14 @@ export default {
     margin-top: unset;
   }
 
+  .asset-proportion-summary {
+    box-shadow: 0 0 8px rgba(100, 110, 144, 0.1)!important;
+  }
+
   .account-secret-summary {
     margin-top: unset;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 8px rgba(100, 110, 144, 0.1)!important;
 
     ::v-deep .echarts {
       height: 16rem;

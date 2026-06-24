@@ -195,6 +195,7 @@ $origin-color: #ffffff;
     background: $origin-color;
     color: var(--color-border);
     border-radius: 3px;
+    box-shadow: 0 0 8px rgba(100, 110, 144, 0.1)!important;
 
     // title 部分
     .title {

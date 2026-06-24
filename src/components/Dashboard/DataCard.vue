@@ -62,6 +62,7 @@ export default {
   padding: 20px;
   background-color: #FFF;
   border-radius: 3px;
+  box-shadow: 0 0 8px rgba(100, 110, 144, 0.1)!important;
 
   .card-content {
     padding-bottom: 16px;

@@ -772,6 +772,7 @@ export default {
       transition: all 0.3s ease;
       max-width: calc(50vw - 30px);
       min-width: 300px;
+      box-shadow: 0 0 8px rgba(100, 110, 144, 0.1)!important;
 
       &.full-width {
         max-width: calc(100vw - 60px);

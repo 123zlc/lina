@@ -205,6 +205,7 @@ $text-color: #646A73;
   background-color: #FFF;
   overflow: hidden;
   border-radius: 0.25rem;
+  box-shadow: 0 0 8px rgba(100, 110, 144, 0.1)!important;
 
   .card-content {
     display: flex;
