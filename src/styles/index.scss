@@ -6,11 +6,11 @@
 @import './fonts/font-awesome.min.css';
 
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar:horizontal {
-  height: 9px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-corner {
@@ -19,13 +19,14 @@
 
 ::-webkit-scrollbar-track {
   border-radius: 10px;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #eee;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
   box-shadow: 8px 10px 20px #c6c6c6 inset;
   border-left: 2px solid rgba(0, 0, 0, 0);
+  background-color: var(--divider-theme-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
