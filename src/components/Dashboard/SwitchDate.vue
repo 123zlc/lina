@@ -106,7 +106,7 @@ $origin-color: #ffffff;
     .el-radio-button__inner {
       color: var(--color-text-primary);
       background: $origin-color;
-      border-radius: 0;
+      // border-radius: 0;
     }
   }
 }

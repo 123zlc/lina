@@ -336,6 +336,7 @@ h5 {
 
 .chart {
   padding: 10px;
+  border-radius: 3px;
 
   ::v-deep .content {
     background-color: #fff;

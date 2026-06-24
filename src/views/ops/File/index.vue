@@ -585,6 +585,8 @@ export default {
   min-width: 925px;
   padding: 0 20px 20px;
   background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(100, 110, 144, 0.1)!important;
 }
 
 .output ::v-deep #terminal {
