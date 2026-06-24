@@ -202,7 +202,7 @@ export default {
   place-content: stretch flex-end;
   justify-content: center;
   align-content: stretch;
-  box-shadow: 0 1px 1px 0 rgba(54, 58, 80, .32);
+  box-shadow: 0 0 8px rgba(100, 110, 144, 0.1)!important;
   border-radius: 3px;
 
   &.shrink {
