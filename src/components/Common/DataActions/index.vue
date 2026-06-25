@@ -295,7 +295,7 @@ $color-drop-menu-border: var(--border-default-theme-color);
       }
 
       &.el-dropdown-selfdefine {
-        border: none;
+        // border: none;
       }
     }
   }

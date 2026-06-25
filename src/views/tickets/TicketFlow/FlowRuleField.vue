@@ -106,6 +106,7 @@ export default {
     width: 96%;
     margin-bottom: 10px;
     box-shadow: unset !important;
+    border-color: var(--border-default-theme-color);
 
     ::v-deep .el-card__body {
       padding: 10px 30px !important;

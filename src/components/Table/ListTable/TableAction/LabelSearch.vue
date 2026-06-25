@@ -157,7 +157,6 @@ export default {
 
 <style lang="scss" scoped>
 .label-search {
-  border: 1px solid var(--color-border);
   overflow: hidden;
   border-radius: 3px;
 

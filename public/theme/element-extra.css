@@ -128,10 +128,13 @@ td .el-button.el-button--mini {
   font-weight: 600;
 }
 
-.el-button.el-button--default:hover:not(.is-disabled) {
-  color: #606266;
-  border-color: var(--color-primary);
-  /* background-color: #e6e6e6; */
+.el-button.el-button--default:not(.is-disabled){
+  border-color: var(--border-default-theme-color);
+  &:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    /* background-color: #e6e6e6; */
+  }
 }
 
 .el-button-group>.el-dropdown>.el-button {
@@ -520,7 +523,7 @@ td .el-button.el-button--mini {
 }
 
 .el-alert.el-alert--info.is-light {
-  border-color: var(--color-info-light);
+  border-color: var(--color-info);
 }
 
 .el-alert.el-alert--warning.is-light {
@@ -537,4 +540,8 @@ td .el-button.el-button--mini {
 
 #nprogress .peg {
   box-shadow: 0 0 10px light-5, 0 0 5px light-5!important;
+}
+
+.el-table--border{
+  border-color: var(--border-default-theme-color);
 }
