@@ -8,7 +8,7 @@ const color = require('css-color-function')
 const formula = require('../src/utils/theme/formula.json')
 
 const OLD_THEME = {
-  '--color-primary': '#1ab394',
+  '--color-primary': '#3D73F5',
   '--color-success': '#2793d7',
   '--color-info': '#1c84c6',
   '--color-warning': '#f8ac59',
@@ -17,10 +17,10 @@ const OLD_THEME = {
 
 const NEW_THEME = {
   '--color-primary': '#3D73F5',
-  '--color-success': '#2793d7',
-  '--color-info': '#1c84c6',
-  '--color-warning': '#f8ac59',
-  '--color-danger': '#ed5565'
+  '--color-success': '#1AC45D',
+  '--color-info': '#3D73F5',
+  '--color-warning': '#FF8F34',
+  '--color-danger': '#FF4545'
 }
 
 function generateColors(themeColors) {
@@ -80,4 +80,4 @@ const css = fs.readFileSync(cssPath, 'utf8')
 const updated = replacePalette(css, generateColors(OLD_THEME), generateColors(NEW_THEME))
 
 fs.writeFileSync(cssPath, updated)
-console.log('Updated Element UI theme CSS to primary #3D73F5')
+console.log('Updated Element UI theme CSS (primary #3D73F5, success #1AC45D, warning #FF8F34, danger #FF4545)')

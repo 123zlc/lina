@@ -177,7 +177,7 @@ export default {
       border-bottom: 1px solid var(--border-default-theme-color);
 
       .icon {
-        color: #ed5565;
+        color: var(--color-danger);
         padding-right: 3px
       }
 
@@ -187,7 +187,7 @@ export default {
 
       .asset-status {
         padding-right: 10px;
-        color: #ed5565
+        color: var(--color-danger)
       }
     }
 
@@ -205,7 +205,7 @@ export default {
   }
 
   .selected-count {
-    color: #1ab394;
+    color: var(--color-success);
   }
 }
 </style>

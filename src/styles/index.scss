@@ -723,7 +723,7 @@ li.rmenu i.fa {
     &::before {
       content: '*';
       margin-right: 4px;
-      color: #ed5565;
+      color: var(--color-danger);
     }
   }
 
