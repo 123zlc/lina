@@ -1080,7 +1080,7 @@ export default {
   border-collapse: collapse;
 
   tr {
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--border-default-theme-color);
     &:last-child { border-bottom: none; }
   }
 
@@ -1141,7 +1141,7 @@ export default {
   border-collapse: collapse;
 
   tr {
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--border-default-theme-color);
     &:last-child { border-bottom: none; }
   }
 

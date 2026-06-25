@@ -48,7 +48,7 @@ export default {
   }
 
   .ibox ::v-deep .el-card__header {
-    border-color: #e7eaec;
+    border-color: var(--border-default-theme-color);
     border-image: none;
     margin-bottom: 0;
     padding: 10px 15px;

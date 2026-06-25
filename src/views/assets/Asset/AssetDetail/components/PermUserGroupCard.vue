@@ -151,7 +151,7 @@ tr td {
 }
 
 tr.item {
-  border-bottom: 1px solid #e7eaec;
+  border-bottom: 1px solid var(--border-default-theme-color);
   padding: 4px 8px;
   display: block;
   //&:last-child {

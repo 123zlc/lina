@@ -59,7 +59,7 @@ $--color-text-secondary: #909399 !default;
 /// color|1|Font Color|2
 $--color-text-placeholder: #c0c4cc !default;
 /// color|1|Border Color|3
-$--border-color-base: #dcdfe6 !default;
+$--border-color-base: var(--border-default-theme-color) !default;
 /// color|1|Border Color|3
 $--border-color-light: #e4e7ed !default;
 /// color|1|Border Color|3
@@ -500,7 +500,7 @@ $--group-title-width: 66px !default;
 /* Tab
 -------------------------- */
 $--tab-font-size: $--font-size-base !default;
-$--tab-border-line: 1px solid #e4e4e4 !default;
+$--tab-border-line: 1px solid var(--border-default-theme-color) !default;
 $--tab-header-color-active: $--color-text-secondary !default;
 $--tab-header-color-hover: $--color-text-regular !default;
 $--tab-header-color: $--color-text-regular !default;
@@ -810,7 +810,7 @@ $--datepicker-off-font-color: $--color-text-placeholder !default;
 $--datepicker-header-font-color: $--color-text-regular !default;
 $--datepicker-icon-color: $--color-text-primary !default;
 $--datepicker-border-color: $--disabled-border-base !default;
-$--datepicker-inner-border-color: #e4e4e4 !default;
+$--datepicker-inner-border-color: var(--border-default-theme-color) !default;
 /// color||Color|0
 $--datepicker-inrange-background-color: $--border-color-extra-light !default;
 /// color||Color|0

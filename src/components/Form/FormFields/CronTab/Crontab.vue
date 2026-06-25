@@ -420,7 +420,7 @@ export default {
   line-height: 24px;
   margin: 17px auto;
   padding: 10px 10px 10px;
-  border: 1px solid #dcdfe6;
+  border: 1px solid var(--border-default-theme-color);
 }
 
 .popup-result .title {
@@ -474,7 +474,7 @@ export default {
   line-height: 24px;
   margin: 0 auto;
   padding: 10px 10px 10px;
-  border: 1px solid #dcdfe6;
+  border: 1px solid var(--border-default-theme-color);
 }
 
 ::v-deep .el-tabs__header {

@@ -174,7 +174,7 @@ export default {
       grid-template-columns: 1fr 1fr;
       justify-content: space-between;
       width: 100%;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--border-default-theme-color);
 
       .icon {
         color: #ed5565;

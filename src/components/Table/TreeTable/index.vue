@@ -268,7 +268,7 @@ $origin-color: #ffffff;
   float: right;
   text-align: center;
   padding: 5px 0;
-  border: 1px solid #DCDFE6;
+  border: 1px solid var(--border-default-theme-color);
   background-color: #f3f3f3;
   border-radius: 3px;
   cursor: pointer;
@@ -297,7 +297,7 @@ $origin-color: #ffffff;
 
 .transition-box.left {
   background: white;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--border-default-theme-color);
   border-radius: 3px;
 }
 

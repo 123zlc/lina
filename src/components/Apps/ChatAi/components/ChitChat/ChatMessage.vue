@@ -249,7 +249,7 @@ export default {
               top: 0;
               left: 0;
               height: 100%;
-              border-left: 2px solid #e5e5e5;
+              border-left: 2px solid var(--border-default-theme-color);
             }
 
             p {

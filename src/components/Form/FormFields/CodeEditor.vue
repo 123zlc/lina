@@ -282,7 +282,7 @@ export default {
 
 <style lang="scss" scoped>
 $header-bg-color: #F5F6F7;
-$input-border-color: #C0C4CC;
+$input-border-color: var(--border-default-theme-color);
 
 .code-editor {
   display: flex;
@@ -464,7 +464,7 @@ $input-border-color: #C0C4CC;
   line-height: 28px;
   padding-left: 15px;
   font-size: 0;
-  border: 1px solid #DCDFE6;
+  border: 1px solid var(--border-default-theme-color);
   border-radius: 4px;
   background-color: #e6e6e6;
 }

@@ -241,7 +241,7 @@ $hover-border-color: transparent;
       color: var(--font-theme-color);
       background-color: var(--bg-theme-color);
       border-bottom: 1px solid var(--divider-theme-color);
-      // border-top: 1px solid var(--menu-border, #e9ecef);
+      // border-top: 1px solid var(--menu-border, var(--border-default-theme-color));
 
       .switch-view {
         width: 100%;
@@ -326,7 +326,7 @@ $hover-border-color: transparent;
       width: 12px;
       height: 80px;
       background: var(--bg-theme-color);
-      // border: 1px solid #DEE0E1;
+      // border: 1px solid var(--border-default-theme-color);
       border-radius: 0 8px 8px 0;
       cursor: pointer;
       z-index: 100;

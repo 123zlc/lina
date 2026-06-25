@@ -18,7 +18,7 @@
         role="button"
         tabindex="0"
         aria-label="Select assets"
-        @click=" handleClick()"
+        @click=" k()"
       >
         <i class="icon el-icon-plus" />
         <span class="title">{{ $t('pleaseSelectAssets') }}</span>
@@ -322,7 +322,7 @@ export default {
 }
 
 .empty-assets {
-  border: 2px dashed #d9d9d9;
+  border: 2px dashed var(--border-default-theme-color);
   border-radius: 6px;
   padding: 56px 16px;
   text-align: center;

@@ -1,5 +1,5 @@
 <template>
-  <div class="filter-field">
+  <div class="filter-field" :class="{ 'is-focused': isFocus }">
     <el-cascader
       v-show="options.length > 0"
       ref="Cascade"
@@ -410,6 +410,16 @@ $origin-white-color: #ffffff;
   align-items: center;
   min-width: 210px;
   background-color: $origin-white-color;
+  transition: border-color 0.2s;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  &:hover{
+    border-color: #C0C4CC;
+  }
+
+  &.is-focused {
+    border-color: var(--color-primary)!important;
+  }
 
   .el-cascader {
     height: 28px;

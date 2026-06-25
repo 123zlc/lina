@@ -54,7 +54,7 @@ export default {
 .preview-box {
   min-height: 388px;
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-default-theme-color);
   border-radius: 3px;
   overflow: auto;
   background: #fff;

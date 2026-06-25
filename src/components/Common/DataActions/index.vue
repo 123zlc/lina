@@ -249,7 +249,7 @@ $color-btn-focus-background: var(--color-primary-light-1, var(--color-primary));
 $color-text-hover: var(--color-primary-light-1);
 $color-divided: #e4e7ed;
 $color-drop-menu-title: #909399;
-$color-drop-menu-border: #e4e7ed;
+$color-drop-menu-border: var(--border-default-theme-color);
 
 // 通用
 .layout {

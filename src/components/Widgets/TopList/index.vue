@@ -64,7 +64,7 @@ export default {
   }
 
   .list-group.clear-list .list-group-item {
-    border-top: 1px solid #e7eaec;
+    border-top: 1px solid var(--border-default-theme-color);
     border-bottom: 0;
     border-right: 0;
     border-left: 0;
@@ -79,7 +79,7 @@ export default {
 
   .list-group-item {
     background-color: inherit;
-    border: 1px solid #e7eaec;
+    border: 1px solid var(--border-default-theme-color);
     display: block;
     margin-bottom: -1px;
     padding: 8px 15px;

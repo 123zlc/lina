@@ -390,7 +390,7 @@ export default {
     position: relative;
     margin: 0;
     text-align: center;
-    border-top: 1px solid #ebeef5;
+    border-top: 1px solid var(--border-default-theme-color);
 
     .v-page {
       width: 50%;
@@ -400,7 +400,7 @@ export default {
       padding: 10px 15px;
 
       &:first-child {
-        border-right: 1px solid #ebeef5;
+        border-right: 1px solid var(--border-default-theme-color);
       }
     }
   }

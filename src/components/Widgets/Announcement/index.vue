@@ -215,7 +215,7 @@ export default {
   .link-section {
     margin-top: 20px;
     padding-top: 15px;
-    border-top: 1px solid #e4e7ed;
+    border-top: 1px solid var(--border-default-theme-color);
     text-align: center;
   }
 }

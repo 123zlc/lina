@@ -595,7 +595,7 @@ div.rMenu li {
   .content {
     height: 30px;
     line-height: 30px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--border-default-theme-color);
     border-radius: 3px;
     padding: 0 5px;
     box-sizing: border-box;
@@ -663,7 +663,7 @@ div.rMenu li {
   &:hover {
     cursor: pointer;
     color: #606266;
-    border-color: #d2d2d2;
+    border-color: var(--border-default-theme-color);
     background-color: #e6e6e6;
   }
 }

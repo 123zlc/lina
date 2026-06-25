@@ -311,7 +311,7 @@ export default {
     //height: 60px;
     padding: 0 15px;
     margin-bottom: 15px;
-    //border-top: 1px solid #ececec;
+    //border-top: 1px solid var(--border-default-theme-color);
   }
 
   .stop {

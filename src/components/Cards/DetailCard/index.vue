@@ -77,7 +77,7 @@ export default {
   line-height: 2;
 
   ::v-deep .el-form-item {
-    border-bottom: 1px dashed #F4F4F4;
+    border-bottom: 1px dashed var(--border-default-theme-color);
     padding: 1px 0;
     margin-bottom: 0;
     display: flex;
@@ -94,11 +94,11 @@ export default {
       border-bottom: none;
 
       ::v-deep .el-form-item__content {
-        border-bottom: 1px dashed #EBEEF5
+        border-bottom: 1px dashed var(--border-default-theme-color)
       }
 
       ::v-deep .el-form-item__label:last-child {
-        border: 1px dashed #EBEEF5;
+        border: 1px dashed var(--border-default-theme-color);
       }
     }
 

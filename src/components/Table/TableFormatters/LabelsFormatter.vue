@@ -262,7 +262,7 @@ export default {
 .tag-dialog {
   .tag-zone {
     margin: 20px 0 0 0;
-    border: solid 1px #ebeef5;
+    border: solid 1px var(--border-default-theme-color);
     padding: 10px;
     background: #f2f2f5;
 

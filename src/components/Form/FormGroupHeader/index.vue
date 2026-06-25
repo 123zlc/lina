@@ -64,7 +64,7 @@ export default {
 
 <style lang="less" scoped>
 .hr-line-dashed {
-  border-top: 1px dashed #e7eaec;
+  border-top: 1px dashed var(--border-default-theme-color);
   color: #ffffff;
   background-color: #ffffff;
   height: 1px;

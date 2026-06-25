@@ -139,7 +139,7 @@ export default {
   min-height: 210px;
   margin-left: 4px;
   padding: 5px 10px;
-  border: 1px solid #DCDFE6;
+  border: 1px solid var(--border-default-theme-color);
   border-radius: 3px;
   @import "~github-markdown-css/github-markdown-light.css";
 }

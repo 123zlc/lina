@@ -306,7 +306,7 @@ export default {
 
 .session {
   margin-top: 13px;
-  border-left: 1px solid #f3f3f3;
+  border-left: 1px solid var(--border-default-theme-color);
 
   .session-title {
     margin-bottom: 8px;

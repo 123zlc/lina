@@ -1,5 +1,5 @@
 <template>
-  <div class="filter-field">
+  <div class="filter-field" :class="{ 'is-focused': focus }">
     <el-tag
       v-for="(v, k) in filterTags"
       :key="k"
@@ -163,13 +163,17 @@ export default {
   flex-wrap: wrap;
   align-items: center;
   //padding: 0 6px;
-  border: 1px solid #dcdee2;
+  border: 1px solid var(--border-default-theme-color);
   border-radius: 3px;
   background-color: #fff;
   line-height: 30px;
 
   &:hover {
-    border-color: #c0c4cc;
+    border-color: #C0C4CC;
+  }
+
+  &.is-focused {
+    border-color: var(--color-primary)!important;
   }
 
   & ::v-deep .el-tag {

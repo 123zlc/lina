@@ -214,7 +214,7 @@ export default {
       line-height: 48px;
       padding: 0 16px;
       overflow: hidden;
-      border-bottom: 1px solid #ececec;
+      border-bottom: 1px solid var(--border-default-theme-color);
       .left {
         img {
           width: 22px;

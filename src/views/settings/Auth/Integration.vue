@@ -121,7 +121,7 @@ export default {
 }
 
 .auth-column {
-  border-right: 1px solid #e6e6e6;
+  border-right: 1px solid var(--border-default-theme-color);
   padding-right: 20px;
 
   &:last-child {
@@ -134,7 +134,7 @@ export default {
 .column-header {
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid var(--border-default-theme-color);
 
   h3 {
     margin: 0;
@@ -214,7 +214,7 @@ h4.auth-method-type {
   .auth-layout {
     .auth-column {
       border-right: none;
-      border-bottom: 1px solid #e6e6e6;
+      border-bottom: 1px solid var(--border-default-theme-color);
       padding-right: 0;
       padding-left: 0;
       padding-bottom: 20px;

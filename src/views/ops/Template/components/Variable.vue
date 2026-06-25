@@ -167,7 +167,7 @@ export default {
       text-overflow: ellipsis;
 
       &:hover {
-        border-right: 2px solid #EBEEF5;
+        border-right: 2px solid var(--border-default-theme-color);
       }
     }
   }

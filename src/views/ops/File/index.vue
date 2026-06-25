@@ -489,7 +489,7 @@ export default {
 .vue-codemirror-wrap ::v-deep .CodeMirror {
   width: 600px;
   height: 100px;
-  border: 1px solid #eee;
+  border: 1px solid var(--border-default-theme-color);
 }
 
 .upload_input ::v-deep .el-input-group__prepend {
@@ -551,7 +551,7 @@ export default {
         list-style: none;
         width: 100%;
         height: 180px;
-        border: 1px dashed #d9d9d9;
+        border: 1px dashed var(--border-default-theme-color);
         overflow-y: auto;
         font-weight: 500;
 
@@ -590,7 +590,7 @@ export default {
 }
 
 .output ::v-deep #terminal {
-  border: dashed 1px #d9d9d9;
+  border: dashed 1px var(--border-default-theme-color);
 }
 
 .status-info {

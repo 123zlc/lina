@@ -307,7 +307,7 @@ h5 {
 }
 
 .folder-list li {
-  border-bottom: 1px solid #e7eaec;
+  border-bottom: 1px solid var(--border-default-theme-color);
   display: block;
   font-size: 13px;
   padding: 5px 0;

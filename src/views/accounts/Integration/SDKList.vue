@@ -113,7 +113,7 @@ export default {
 .code-markdown {
   min-height: 210px;
   padding: 10px 20px;
-  border: 1px solid #DCDFE6;
+  border: 1px solid var(--border-default-theme-color);
 
   ::v-deep .table {
     border-collapse: collapse;
@@ -121,7 +121,7 @@ export default {
     width: 100%;
 
     th, td {
-      border: 1px solid #ebeef5;
+      border: 1px solid var(--border-default-theme-color);
       padding: 10px;
       text-align: left;
     }
@@ -136,7 +136,7 @@ export default {
   @import "~highlight.js/styles/atom-one-light.css";
   min-height: 210px;
   padding: 10px 20px;
-  border: 1px solid #DCDFE6;
+  border: 1px solid var(--border-default-theme-color);
 }
 
 .copy-btn {

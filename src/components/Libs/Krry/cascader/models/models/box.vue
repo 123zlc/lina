@@ -242,7 +242,7 @@ export default {
     margin: 0;
     padding: 5px 0;
     text-align: center;
-    border-top: 1px solid #ebeef5;
+    border-top: 1px solid var(--border-default-theme-color);
   }
 }
 </style>

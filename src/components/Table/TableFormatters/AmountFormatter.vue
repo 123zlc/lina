@@ -163,6 +163,6 @@ export default {
 }
 
 .detail-item:first-child {
-  //border-top: 1px solid #EBEEF5;
+  //border-top: 1px solid var(--border-default-theme-color);
 }
 </style>

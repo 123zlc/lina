@@ -473,6 +473,6 @@ export default {
 
 .el-select-dropdown__header {
   padding: 10px 20px;
-  border-bottom: solid 1px #ebeef5;
+  border-bottom: solid 1px var(--border-default-theme-color);
 }
 </style>

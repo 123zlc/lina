@@ -19,7 +19,7 @@
 
 ::-webkit-scrollbar-track {
   border-radius: 10px;
-  border: 1px solid #eee;
+  border: 1px solid var(--border-default-theme-color);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -276,6 +276,9 @@ input[type='file'] {
 
 // table 相关通用样式
 .el-data-table .el-table {
+  &::before{
+    background-color: var(--border-default-theme-color)!important;
+  }
   th,
   td {
     font-size: 13px;
@@ -290,7 +293,7 @@ input[type='file'] {
 
   th {
     padding: 8px 0;
-    border-bottom: 1px solid #e7e7e7 !important;
+    border-bottom: 1px solid var(--border-default-theme-color) !important;
 
     .caret-wrapper {
       height: 21px;
@@ -320,6 +323,9 @@ input[type='file'] {
   // 表格右侧操作列，可能会存在高度占不满的问题，此时按钮底部会出现边框，因此需要显示指定
   .el-table__fixed-right {
     height: 100% !important;
+    &::before{
+      background-color: var(--border-default-theme-color);
+    }
   }
 
   // 表头
@@ -332,7 +338,7 @@ input[type='file'] {
       // background-color: var(--table-header-bg, #fff);
 
       &:hover {
-        border-right: 2px solid #ebeef5;
+        border-right: 2px solid var(--border-default-theme-color);
       }
     }
 
@@ -343,7 +349,7 @@ input[type='file'] {
     }
 
     &:last-child {
-      border-right: 1px solid #ebeef5 !important;
+      border-right: 1px solid var(--border-default-theme-color) !important;
 
       .cell {
         border-right: none;
@@ -382,7 +388,7 @@ input[type='file'] {
 
       &:last-child {
         padding: 0;
-        border-right: 1px solid #ebeef5 !important;
+        border-right: 1px solid var(--border-default-theme-color) !important;
 
         .cell {
           vertical-align: unset;

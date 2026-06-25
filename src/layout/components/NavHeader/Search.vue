@@ -438,7 +438,7 @@ export default {
 
 ::v-deep .search-input-wrapper {
   padding: 20px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--border-default-theme-color);
   // background: #fff;
 
   .el-input {
@@ -483,7 +483,7 @@ export default {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid var(--border-default-theme-color);
   display: flex;
   align-items: center;
   justify-content: space-between;

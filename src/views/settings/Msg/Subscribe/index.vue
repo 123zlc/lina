@@ -210,6 +210,6 @@ export default {
 ::v-deep .black-theme-popover .el-popover__inner {
   background-color: #000 !important;
   color: #fff !important;
-  border-color: #000 !important;
+  border-color: var(--border-default-theme-color) !important;
 }
 </style>

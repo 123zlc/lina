@@ -71,7 +71,7 @@ export default {
   }
 
   & ::v-deep .jsoneditor {
-    border: 1px solid #e5e6e7;
+    border: 1px solid var(--border-default-theme-color);
     border-left: unset;
     border-top: unset;
     border-radius: 3px;

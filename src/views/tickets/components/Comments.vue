@@ -278,7 +278,7 @@ export default {
 }
 
 .feed-activity-list .feed-element {
-  border-bottom: 1px solid #e7eaec;
+  border-bottom: 1px solid var(--border-default-theme-color);
 }
 
 .feed-element:first-child {

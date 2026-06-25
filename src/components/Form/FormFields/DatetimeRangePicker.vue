@@ -113,7 +113,7 @@ html:lang(pt-br) {
   }
 
   margin-left: 10px;
-  border: 1px solid #dcdee2;
+  border: 1px solid var(--border-default-theme-color);
   border-radius: 3px;
   height: 28px;
 

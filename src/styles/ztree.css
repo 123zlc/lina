@@ -55,7 +55,7 @@ website:    http://code.google.com/p/jquerytree/
   color: #f3f3f3;
   background-color: #676a6c;
   font-size: 12px;
-  border: 1px #585956 solid;
+  border: 1px var(--border-default-theme-color) solid;
   *border: 0px;
 }
 .ztree li a:hover {
@@ -74,7 +74,7 @@ website:    http://code.google.com/p/jquerytree/
   background-color: #f3f3f3;
   color: red;
   height: 20px;
-  border: 1px #676a6c solid;
+  border: 1px var(--border-default-theme-color) solid;
   opacity: 0.8;
 }
 .ztree li a.tmpTargetNode_inner {
@@ -82,7 +82,7 @@ website:    http://code.google.com/p/jquerytree/
   background-color: #f3f3f3;
   color: #676a6c;
   height: 20px;
-  border: 1px #666 solid;
+  border: 1px var(--border-default-theme-color) solid;
   opacity: 0.8;
   filter: alpha(opacity=80);
 }
@@ -406,7 +406,7 @@ ul.ztree.zTreeDragUL {
   height: auto;
   overflow: hidden;
   background-color: #cfcfcf;
-  border: 1px #676a6c dotted;
+  border: 1px var(--border-default-theme-color) dotted;
   opacity: 0.8;
   filter: alpha(opacity=80);
 }

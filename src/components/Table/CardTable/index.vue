@@ -291,7 +291,7 @@ export default {
 
 .pagination {
   padding-top: 10px;
-  border-top: 1px solid #e7eaec;
+  border-top: 1px solid var(--border-default-theme-color);
 }
 
 // .el-col {

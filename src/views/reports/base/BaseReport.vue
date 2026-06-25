@@ -713,7 +713,7 @@ export default {
       .el-checkbox__inner {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-        border-color: #dcdfe6 !important;
+        border-color: var(--border-default-theme-color) !important;
       }
 
       .el-checkbox__label {

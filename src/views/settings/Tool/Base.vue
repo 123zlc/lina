@@ -42,7 +42,7 @@
         </div>
       </div>
       <el-form-item :label="$tc('Output')">
-        <Term ref="xterm" :xterm-config="xtermConfig" style="border: solid 1px #dddddd" />
+        <Term ref="xterm" :xterm-config="xtermConfig" style="border: solid 1px var(--border-default-theme-color)" />
       </el-form-item>
       <el-form-item>
         <el-button

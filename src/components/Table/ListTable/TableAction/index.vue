@@ -180,8 +180,7 @@ $headerHeight: 30px;
     justify-content: flex-end;
 
     .right-side-item.action-search {
-      border: 1px solid var(--color-border);
-      overflow: hidden;
+      // overflow: hidden;
       border-radius: 4px;
     }
   }

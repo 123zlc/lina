@@ -51,7 +51,7 @@
     color: var(--color-icon-primary);
     min-width: 28px;
     border-radius: 3px;
-    border: 1px solid #DCDFE6;
+    border: 1px solid var(--border-default-theme-color);
     font-size: 12px;
     font-weight: 400;
 }
@@ -137,7 +137,7 @@ td .el-button.el-button--mini {
 .el-button-group>.el-dropdown>.el-button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  border-left-color: rgb(220, 223, 230);
+  border-left-color: var(--border-default-theme-color);
 }
 
 .el-alert__content {
@@ -185,7 +185,7 @@ td .el-button.el-button--mini {
 .el-input__inner {
   background-color: #FFFFFF;
   background-image: none;
-  border: 1px solid #e5e6e7;
+  border: 1px solid var(--border-default-theme-color);
   border-radius: 3px;
   color: inherit;
   display: block;
@@ -230,7 +230,7 @@ td .el-button.el-button--mini {
 
 .el-tag.el-tag--info {
   background-color: #f1f1f1!important;
-  border-color: #e5e6e7!important;
+  border-color: var(--border-default-theme-color)!important;
   color: #333333!important;
 }
 
@@ -242,7 +242,7 @@ td .el-button.el-button--mini {
 }
 
 .el-tag.el-tag--info.is-hit {
-  border-color: #e5e6e7!important;
+  border-color: var(--border-default-theme-color)!important;
 }
 
 .el-tag.el-tag--info .el-tag__close:hover {
@@ -252,11 +252,11 @@ td .el-button.el-button--mini {
 }
 
 .el-table .ascending .sort-caret.ascending {
-  border-bottom-color: #676a6c;
+  border-bottom-color: var(--border-default-theme-color);
 }
 
 .el-table .descending .sort-caret.descending {
-  border-top-color: #676a6c;
+  border-top-color: var(--border-default-theme-color);
 }
 
 .text-link {
@@ -327,7 +327,7 @@ td .el-button.el-button--mini {
 .el-tooltip__popper.is-light {
   background: #FFF;
   max-width: 500px;
-  border: 1px solid #e7eaec;
+  border: 1px solid var(--border-default-theme-color);
   box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, .132), 0 .3px .9px 0 rgba(0, 0, 0, .108);
   line-height: 1.5;
   padding: 10px;
@@ -339,7 +339,7 @@ td .el-button.el-button--mini {
 }
 
 .el-table__header thead tr th {
-  /*border-bottom: 1px solid #e7e7e7 !important;*/
+  /*border-bottom: 1px solid var(--border-default-theme-color) !important;*/
 }
 
 .el-table .cell,
@@ -508,7 +508,7 @@ td .el-button.el-button--mini {
 }
 
 .el-alert {
-  border: solid 1px #e7eaec;
+  border: solid 1px var(--border-default-theme-color);
 }
 
 .el-alert.el-alert--success.is-light {

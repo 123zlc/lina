@@ -156,7 +156,7 @@ div.info-panel {
 
   .panel-header {
     padding: 10px 20px;
-    //border-bottom: solid 1px #e7eaec;
+    //border-bottom: solid 1px var(--border-default-theme-color);
     display: flex;
     justify-content: space-between;
     gap: 10px;

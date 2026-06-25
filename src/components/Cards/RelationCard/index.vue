@@ -346,7 +346,7 @@ tr td {
 }
 
 tr.item td {
-  border-top: 1px dashed #EBEEF5;
+  border-top: 1px dashed var(--border-default-theme-color);
 }
 
 .box-margin {

@@ -90,6 +90,6 @@ tr td {
 }
 
 tr.item td {
-  border-top: 1px solid #e7eaec;
+  border-top: 1px solid var(--border-default-theme-color);
 }
 </style>

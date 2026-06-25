@@ -97,7 +97,7 @@ export default {
   .content {
     .el-col {
       padding-left: 16px;
-      border-left: 1px solid #EFF0F1;
+      border-left: 1px solid var(--border-default-theme-color);
 
       &:first-child {
         padding-left: 0;

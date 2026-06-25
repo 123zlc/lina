@@ -82,7 +82,7 @@ export default {
 .help-table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--border-default-theme-color);
 }
 
 ::v-deep .help-table th,

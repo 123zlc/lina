@@ -131,7 +131,7 @@ export default {
   &__header {
     box-sizing: border-box;
     padding: 15px 22px;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid var(--border-default-theme-color);
     font-weight: 400;
   }
 
@@ -145,7 +145,7 @@ export default {
   }
 
   &__footer {
-    border-top: 1px solid #dee2e6;
+    border-top: 1px solid var(--border-default-theme-color);
     padding: 16px 25px;
     justify-content: flex-end;
   }

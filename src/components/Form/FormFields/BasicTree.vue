@@ -161,7 +161,7 @@ export default {
       }
 
       &:before {
-        border-left: 1px dashed #dcdcdc;
+        border-left: 1px dashed var(--border-default-theme-color);
         bottom: 0;
         height: 100%;
         top: -26px;
@@ -177,7 +177,7 @@ export default {
       }
 
       &:after {
-        border-top: 1px dashed #dcdcdc;
+        border-top: 1px dashed var(--border-default-theme-color);
         height: 20px;
         top: 12px;
         width: 24px;

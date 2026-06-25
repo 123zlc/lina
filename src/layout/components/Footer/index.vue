@@ -49,7 +49,7 @@ export default {
     z-index: 1000;
     padding: 0 24px;
     background: white;
-    border-top: 1px solid #e7eaec;
+    border-top: 1px solid var(--border-default-theme-color);
     transition:margin-left 0.3s;
     height: 48px;
     line-height: 48px;

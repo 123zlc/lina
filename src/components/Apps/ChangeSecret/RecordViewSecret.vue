@@ -93,7 +93,7 @@ export default {
   }
 
   .el-form-item {
-    border-bottom: 1px solid #EBEEF5;
+    border-bottom: 1px solid var(--border-default-theme-color);
     padding: 5px 0;
     margin-bottom: 0;
 

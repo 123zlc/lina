@@ -242,7 +242,7 @@ export default {
     }
 
     .el-drawer__header {
-      border-bottom: 1px solid #EBEEF5;
+      border-bottom: 1px solid var(--border-default-theme-color);
       margin-bottom: 0;
       padding: 15px 20px;
       font-size: 16px;
@@ -288,7 +288,7 @@ export default {
     }
 
     .drawer__footer {
-      border-top: solid 1px #f3f3f3;
+      border-top: solid 1px var(--border-default-theme-color);
     }
 
     //.el-drawer__header {

@@ -224,7 +224,7 @@ export default {
       cursor: pointer;
       height: 26px;
       line-height: 26px;
-      border: 1px solid #d8dce5;
+      border: 1px solid var(--border-default-theme-color);
       color: #495060;
       background: #fff;
       padding: 0 8px;

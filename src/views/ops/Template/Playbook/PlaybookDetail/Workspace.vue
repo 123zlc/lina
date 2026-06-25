@@ -346,18 +346,18 @@ export default {
 .vue-codemirror-wrap ::v-deep .CodeMirror {
   width: 600px;
   height: 100px;
-  border: 1px solid #eee;
+  border: 1px solid var(--border-default-theme-color);
 }
 
 .tree-box {
   margin-right: 2px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--border-default-theme-color);
 }
 
 .output {
   padding-left: 30px;
   background-color: rgb(247 247 247);
-  border: solid 1px #f3f3f3;;
+  border: solid 1px var(--border-default-theme-color);;
 }
 
 .status_success {
