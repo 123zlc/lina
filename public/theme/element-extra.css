@@ -544,4 +544,6 @@ td .el-button.el-button--mini {
 
 .el-table--border{
   border-color: var(--border-default-theme-color);
+  border-left: none;
+  border-right: none;
 }

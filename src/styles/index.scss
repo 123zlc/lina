@@ -349,7 +349,7 @@ input[type='file'] {
     }
 
     &:last-child {
-      border-right: 1px solid var(--border-default-theme-color) !important;
+      // border-right: 1px solid var(--border-default-theme-color) !important;
 
       .cell {
         border-right: none;
