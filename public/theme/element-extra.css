@@ -559,6 +559,19 @@ td .el-button.el-button--mini {
   background-color: transparent;
 }
 
+.el-date-editor .el-icon-circle-close,
+.el-date-editor .el-range__close-icon,
+.el-date-editor .el-input__clear {
+  color: var(--font-theme-grayOut-color);
+  transition: color 0.2s;
+}
+
+.el-date-editor .el-icon-circle-close:hover,
+.el-date-editor .el-range__close-icon:hover,
+.el-date-editor .el-input__clear:hover {
+  color: var(--font-hover-theme-color);
+}
+
 #nprogress .bar {
   background: light-5!important;
 }
