@@ -30,24 +30,14 @@ export default {
       return this.publicSettings['INTERFACE']['login_title']
     },
     logoTitleStyle() {
-      const minFontSize = 10
-      const maxFontSize = 16
-      const titleLength = (this.logoTitle || '').trim().length || 1
       const sidebarWidth = 200
       const marginLeft = 10
       const horizontalPadding = 10
       const logoWidth = 32
       const gap = 8
-      const letterSpacing = 1.5
       const availableWidth = sidebarWidth - marginLeft - horizontalPadding - logoWidth - gap
-      const availableTextWidth = Math.max(
-        minFontSize,
-        availableWidth - Math.max(0, titleLength - 1) * letterSpacing
-      )
-      const fontSize = Math.max(minFontSize, Math.floor(availableTextWidth / titleLength))
 
       return {
-        fontSize: `${Math.min(maxFontSize, fontSize)}px`,
         maxWidth: `${availableWidth}px`
       }
     }
