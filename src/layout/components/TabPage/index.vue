@@ -229,7 +229,7 @@ export default {
   }
 
   .tab-page-content {
-    padding: 10px 30px 22px;
+    padding: 10px 20px 20px;
     overflow-y: auto;
     height: calc(100% - 33px);
 
