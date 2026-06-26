@@ -231,7 +231,7 @@ $hover-border-color: transparent;
       display: flex;
       align-items: center;
       width: 100%;
-      height: 50px;
+      height: 56px;
       font-size: 16px;
       font-weight: 500;
       overflow: hidden;
@@ -245,13 +245,13 @@ $hover-border-color: transparent;
 
       .switch-view {
         width: 100%;
-        padding: 5px;
+        padding: 1px;
 
         ::v-deep .el-popover__reference {
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 0 10px 0 15px;
+          padding: 0 15px 0 15px;
 
           .view-title {
             width: calc(100% - 10px);
