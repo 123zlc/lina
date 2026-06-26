@@ -316,7 +316,7 @@ td .el-button.el-button--mini {
 }
 
 .el-message-box__headerbtn .el-message-box__close {
-  color: #606266;
+  color: var(--font-theme-grayOut-color);
 }
 
 .el-tooltip__popper.is-light {
