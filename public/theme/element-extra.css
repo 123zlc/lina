@@ -238,20 +238,12 @@ td .el-button.el-button--mini {
 }
 
 .el-tag.el-tag--info .el-tag__close {
-    display: inline-block;
-    margin-top: 3px;
-    color: var(--color-text-primary);
-    background-color: inherit;
+  display: inline-block;
+  margin-top: 3px;
 }
 
 .el-tag.el-tag--info.is-hit {
   border-color: var(--border-default-theme-color)!important;
-}
-
-.el-tag.el-tag--info .el-tag__close:hover {
-  color: #000000;
-  font-weight: 600;
-  background-color: inherit;
 }
 
 .el-table .ascending .sort-caret.ascending {
@@ -534,6 +526,37 @@ td .el-button.el-button--mini {
 .el-alert.is-dark .el-alert__closebtn:hover,
 .el-alert.is-dark .el-alert__closebtn:focus {
   color: var(--divider-theme-color);
+}
+
+.el-tag:not(.el-tag--dark) .el-tag__close {
+  color: inherit;
+  background-color: transparent;
+  transition: color 0.2s;
+}
+
+.el-tag:not(.el-tag--dark) .el-tag__close:hover {
+  color: inherit;
+  background-color: transparent;
+}
+
+.el-tag.el-tag--info:not(.el-tag--dark) .el-tag__close {
+  color: var(--font-theme-grayOut-color);
+}
+
+.el-tag.el-tag--info:not(.el-tag--dark) .el-tag__close:hover {
+  color: var(--border-default-theme-color);
+  background-color: transparent;
+}
+
+.el-tag--dark .el-tag__close {
+  color: var(--bg-theme-color);
+  background-color: transparent;
+  transition: color 0.2s;
+}
+
+.el-tag--dark .el-tag__close:hover {
+  color: var(--divider-theme-color);
+  background-color: transparent;
 }
 
 #nprogress .bar {

@@ -714,6 +714,37 @@ li.rmenu i.fa {
   }
 }
 
+.el-tag:not(.el-tag--dark) .el-tag__close {
+  color: inherit;
+  background-color: transparent;
+  transition: color 0.2s;
+
+  &:hover {
+    color: inherit;
+    background-color: transparent;
+  }
+}
+
+.el-tag.el-tag--info:not(.el-tag--dark) .el-tag__close {
+  color: var(--font-theme-grayOut-color);
+
+  &:hover {
+    color: var(--border-default-theme-color);
+    background-color: transparent;
+  }
+}
+
+.el-tag--dark .el-tag__close {
+  color: var(--bg-theme-color);
+  background-color: transparent;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--divider-theme-color);
+    background-color: transparent;
+  }
+}
+
 .el-input-number {
   .el-input-number__decrease,
   .el-input-number__increase {
