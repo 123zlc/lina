@@ -23,6 +23,6 @@ export default {
 
 <style scoped lang="scss">
 .list-table {
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
 }
 </style>
