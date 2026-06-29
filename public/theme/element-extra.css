@@ -208,6 +208,32 @@ td .el-button.el-button--mini {
   line-height: 30px;
 }
 
+.el-input__inner::placeholder,
+.el-textarea__inner::placeholder,
+.el-range-input::placeholder {
+  color: var(--font-placeholder-theme-color);
+  opacity: 1;
+}
+
+.el-input__inner::-webkit-input-placeholder,
+.el-textarea__inner::-webkit-input-placeholder,
+.el-range-input::-webkit-input-placeholder {
+  color: var(--font-placeholder-theme-color);
+}
+
+.el-input__inner::-moz-placeholder,
+.el-textarea__inner::-moz-placeholder,
+.el-range-input::-moz-placeholder {
+  color: var(--font-placeholder-theme-color);
+  opacity: 1;
+}
+
+.el-input__inner:-ms-input-placeholder,
+.el-textarea__inner:-ms-input-placeholder,
+.el-range-input:-ms-input-placeholder {
+  color: var(--font-placeholder-theme-color);
+}
+
 .option-group .el-select-dropdown__item.hover, .option-group .el-select-dropdown__item.selected {
   background-color: primary;
   color: white;

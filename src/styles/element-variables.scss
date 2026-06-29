@@ -445,7 +445,7 @@ $--input-color-disabled: $--font-color-disabled-base !default;
 /// color||Color|0
 $--input-icon-color: $--color-text-placeholder !default;
 /// color||Color|0
-$--input-placeholder-color: $--color-text-placeholder !default;
+$--input-placeholder-color: var(--font-placeholder-theme-color) !default;
 $--input-max-width: 314px !default;
 
 $--input-hover-border: $--border-color-hover !default;
