@@ -206,6 +206,10 @@ module.exports = {
       })
       .end()
 
+    config.module
+      .rule('images')
+      .test(/\.(png|jpe?g|gif|webp|ico)(\?.*)?$/)
+
     // set preserveWhitespace
     config.module
       .rule('vue')

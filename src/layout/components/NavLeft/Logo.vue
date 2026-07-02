@@ -14,20 +14,21 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import logoUrl from '@/assets/img/logo.png'
+import { LOGIN_TITLE } from '@/constants/branding'
 
 export default {
   name: 'SidebarLogo',
   computed: {
-    ...mapGetters(['viewRoutes', 'publicSettings', 'logoMode', 'sidebar']),
-    // eslint-disable-next-line vue/return-in-computed-property
+    ...mapGetters(['viewRoutes', 'logoMode', 'sidebar']),
     logoTextSrc() {
-      return this.publicSettings['INTERFACE']['logo_index']
+      return logoUrl
     },
     logoSrc() {
-      return this.publicSettings['INTERFACE']['logo_logout']
+      return logoUrl
     },
     logoTitle() {
-      return this.publicSettings['INTERFACE']['login_title']
+      return LOGIN_TITLE
     },
     logoTitleStyle() {
       const sidebarWidth = 200

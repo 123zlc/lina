@@ -3,6 +3,9 @@ import { getPublicSettings } from '@/api/settings'
 import { applyProjectTheme } from '@/utils/theme/index'
 import { getProjectTheme } from '@/utils/theme/color'
 import request from '@/utils/request'
+import faviconUrl from '@/assets/img/facio.ico'
+import logoUrl from '@/assets/img/logo.png'
+import { LOGIN_TITLE } from '@/constants/branding'
 
 const { showSettings, fixedHeader, sidebarLogo, tagsView } = defaultSettings
 
@@ -27,6 +30,10 @@ function syncInterfaceTheme(interfaceSettings = {}) {
 
   return {
     ...interfaceSettings,
+    login_title: LOGIN_TITLE,
+    logo_index: logoUrl,
+    logo_logout: logoUrl,
+    favicon: faviconUrl,
     theme_info: {
       ...(interfaceSettings.theme_info || {}),
       colors: themeColors
@@ -34,8 +41,7 @@ function syncInterfaceTheme(interfaceSettings = {}) {
   }
 }
 
-function updateTitleIcon(interfaceSettings) {
-  const faviconURL = interfaceSettings?.favicon
+function updateTitleIcon() {
   let link = document.querySelector("link[rel*='icon']")
   if (!link) {
     link = document.createElement('link')
@@ -43,10 +49,8 @@ function updateTitleIcon(interfaceSettings) {
     link.rel = 'shortcut icon'
     document.getElementsByTagName('head')[0].appendChild(link)
   }
-  if (faviconURL) {
-    link.href = faviconURL
-  }
-  document.title = interfaceSettings?.login_title || ''
+  link.href = faviconUrl
+  document.title = LOGIN_TITLE
 }
 
 const mutations = {
@@ -87,7 +91,7 @@ const actions = {
       getPublicSettings(isOpen)
         .then(response => {
           const data = response || {}
-          updateTitleIcon(data?.INTERFACE)
+          updateTitleIcon()
           const interfaceSettings = syncInterfaceTheme(data?.INTERFACE)
           const logoMode = interfaceSettings?.logo_mode || 'combine'
           const vendor = interfaceSettings?.vendor || ''
