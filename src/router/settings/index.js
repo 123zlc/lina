@@ -533,7 +533,8 @@ export default {
         title: i18n.t('InterfaceSettings'),
         icon: 'face',
         licenseRequired: true,
-        permissions: ['settings.change_interface']
+        permissions: ['settings.change_interface'],
+        hidden: true
       }
     },
     {
