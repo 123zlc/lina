@@ -39,7 +39,7 @@ function setPageTitle() {
   const loginTitle = store.getters.publicSettings['INTERFACE']['login_title']
   const routeTitle = toSentenceCase(currentRoute.meta.title)
   if (routeTitle) {
-    document.title = routeTitle + ' - ' + loginTitle
+    document.title = loginTitle
   }
 }
 
