@@ -18,7 +18,7 @@
         role="button"
         tabindex="0"
         aria-label="Select assets"
-        @click=" k()"
+        @click="handleClick()"
       >
         <i class="icon el-icon-plus" />
         <span class="title">{{ $t('pleaseSelectAssets') }}</span>
